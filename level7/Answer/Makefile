@@ -19,3 +19,5 @@ $(NAME) : $(LIB_FILE) $(MAIN_OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
 $(LIB_FILE) : $(LIB_OBJS)
 	$(AR) $(ARFLAGS) $@ $?
+%.o : %.c
+	$(CC) $(CFLAGS) -c $<
