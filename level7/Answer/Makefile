@@ -1,23 +1,34 @@
 NAME := main
-LIB_FILE := libft.a
+
+SRC = main.c
+OBJ = $(SRC:.c=.o)
+
+LIBFT := libft.a
 LIB_NAME := ft
 LIB_SRCS := first.c \
 		second.c \
 		third.c
-LIB_OBJS := first.o \
-		second.o \
-		third.o
-MAIN_SRC = main.c
-MAIN_OBJ = main.o
+LIB_OBJS := $(LIB_SRCS:.c=.o)
 
-CC := gcc
-CFLAGS := -Wall -Wextra -Werror
 AR := ar
 ARFLAGS := -rc
+CC := gcc
+CFLAGS := -Wall -Wextra -Werror
 
-$(NAME) : $(LIB_FILE) $(MAIN_OBJ)
+all : $(NAME)
+
+clean :
+	rm -f *.o
+fclean : clean
+	rm -f $(LIBFT) $(NAME)
+re : fclean all
+
+
+$(NAME) : $(OBJ) $(LIBFT)
 	$(CC) $(CFLAGS) -o $@ $^
-$(LIB_FILE) : $(LIB_OBJS)
+$(LIBFT) : $(LIB_OBJS)
 	$(AR) $(ARFLAGS) $@ $?
 %.o : %.c
 	$(CC) $(CFLAGS) -c $<
+
+.PHONY : all clean fclean

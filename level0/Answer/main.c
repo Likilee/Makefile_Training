@@ -2,6 +2,6 @@
 
 int	main()
 {
-	printf("hello world\n");
+	printf("Level 0 success!!\n");
 	return (0);
 }

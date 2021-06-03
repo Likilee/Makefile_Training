@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int		main()
+int	main()
 {
 	first();
 	second();

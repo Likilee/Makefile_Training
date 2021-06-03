@@ -1,9 +1,12 @@
 Level : 3
+학습 목표 : 자동 변수(Automatic variables)를 사용할 수 있다.
 ---------
-1. 목표 : .c 파일들을 .o 파일로 컴파일한 뒤, ft라는 이름의 정적라이브러리 파일로 만드시오.
-2. 제한 사항
-   - Rule의 recipe 작성 시 Target과 Dependency를 적절한 자동  변수(Automatic Variables)를 사용하여 작성하세요.
-   - ar 유틸리티를 사용하여 archive 하시오.
-   - 리링크되지 않아야함.
-   - 2줄 이내로 작성하시오.
-3. 학습 Point : 자동  변수(Automatic variables)를 사용할 수 있다.
+< 문제 >
+.c 파일들을 .o 파일로 컴파일한 뒤, ft라는 이름의 정적라이브러리 파일(libft.a)로 만드시오.
+
+< 제한 사항 >
+ - Rule의 Recipe 작성 시 Target과 Dependency를 적절한 자동 변수(Automatic Variables)를 사용하여 작성하세요.
+ - Rule을 변수만으로 작성하시오.
+ - 적절한 변수를 할당하시오.
+ - ar 유틸리티를 사용하여 archive 하시오.
+ - 리링크되지 않아야 합니다.

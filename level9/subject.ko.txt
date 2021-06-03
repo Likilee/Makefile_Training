@@ -1,0 +1,15 @@
+Level : 9
+학습 목표
+ - 다른 make 파일을 호출할 수 있다.
+---------
+< 문제 >
+ - 'make all' ./src/*.c 파일들을 ./obj/*.o 파일로 컴파일 한 뒤 ./lib/libft.a 와 링킹하여 ./main을 생성하시오.
+ - 'make all' 실행 시 ./lib 디렉토리에 ./libft.a가 없을 시 ./lib/Makefile을 실행하여 libft.a를 생성한다.
+
+< 제한 사항 >
+ - .c 파일들을 할당한 변수를 함수로 치환하여 .o 파일을 할당할 변수로 정의하시오.
+ - 패턴 Rule을 사용하여 오브젝트 파일 생성 규칙을 정의하시오
+ - Rule의 Recipe 작성 시 Target과 Dependency를 적절한 자동 변수(Automatic Variables)를 사용하여 작성하세요.
+ - Rule을 변수만으로 작성하시오.
+ - 적절한 변수를 할당하시오.
+ - 리링크되지 않아야 합니다.

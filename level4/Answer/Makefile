@@ -10,3 +10,6 @@ ARFLAGS := -rc
 
 $(NAME) : $(OBJS)
 	$(AR) $(ARFLAGS) $@ $?
+
+%.o : %.c
+	$(CC) $(CFLAGS) -c $<

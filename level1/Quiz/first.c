@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-int	main()
+void	first()
 {
-	printf("hello world\n");
-	return (0);
+	printf("I'm first\n");
 }
+
