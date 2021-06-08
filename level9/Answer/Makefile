@@ -29,12 +29,12 @@ re : fclean all
 run : all
 	./$(NAME)
 
-$(NAME) : $(OBJ)
+$(NAME) : $(LIB) $(OBJ)
 	$(CC) $(CFLAGS) $(INCLUDE) -L$(LIB_DIR) -l$(LIB_NAME) -o $@ $^
 
 $(LIB) :
 	make -C $(LIB_DIR) all
-	
+
 $(OBJ_DIR)%.o : $(SRC_DIR)%.c
 	@mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
